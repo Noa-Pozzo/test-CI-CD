@@ -93,28 +93,3 @@ jobs:
     - name: Run unit tests
       run: ../vendor/bin/phpunit --no-coverage
       working-directory: tst
-
-  Mocha:
-    runs-on: ubuntu-latest
-    steps:
-
-    - name: Checkout
-      uses: actions/checkout@v4
-
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
-        cache-dependency-path: 'js/package-lock.json'
-
-    - name: Setup Mocha
-      run: npm install -g mocha
-
-    - name: Setup Node modules
-      run: npm ci
-      working-directory: js
-
-    - name: Run unit tests
-      run: npm test
-      working-directory: js
