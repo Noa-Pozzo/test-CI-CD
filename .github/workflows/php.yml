@@ -96,6 +96,8 @@ jobs:
       run: ../vendor/bin/phpunit --coverage-cobertura=resultat.xml
       working-directory: tst
 
+    - run: cat resultat.xml
+
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
