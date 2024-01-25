@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['8.1']
+        php-versions: ['8.2']
     name: PHP ${{ matrix.php-versions }} unit tests on ${{ matrix.operating-system }}
     env:
       extensions: gd, sqlite3
