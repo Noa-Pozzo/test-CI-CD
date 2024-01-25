@@ -97,6 +97,10 @@ jobs:
       working-directory: tst
 
     - run: ls
+
+    - run: cd tst/
+
+    - run: ls
  
     - run: cat resultat.xml
 
