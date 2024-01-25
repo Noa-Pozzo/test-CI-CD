@@ -91,6 +91,8 @@ jobs:
 
     # testing
     - name: Run unit tests
+      env:
+        XDEBUG_MODE: coverage
       run: ../vendor/bin/phpunit --coverage-cobertura=resultat.xml
       working-directory: tst
 
