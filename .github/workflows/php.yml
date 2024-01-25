@@ -91,5 +91,5 @@ jobs:
 
     # testing
     - name: Run unit tests
-      run: ../vendor/bin/phpunit --no-coverage
+      run: XDEBUG_MODE=coverage /usr/bin/phpunit
       working-directory: tst
