@@ -98,9 +98,7 @@ jobs:
 
     - run: ls
 
-    - run: cd tst/
-
-    - run: ls
+    - run: ls tst/
  
     - run: cat resultat.xml
 
