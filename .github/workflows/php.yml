@@ -96,6 +96,8 @@ jobs:
       run: ../vendor/bin/phpunit --coverage-cobertura=resultat.xml
       working-directory: tst
 
+    - run: ls
+ 
     - run: cat resultat.xml
 
     - name: Code Coverage Report
