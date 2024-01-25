@@ -91,5 +91,5 @@ jobs:
 
     # testing
     - name: Run unit tests
-      run: phpunit --coverage-cobertura=resultat.xml
+      run: ../vendor/bin/phpunit --coverage-cobertura=resultat.xml
       working-directory: tst
