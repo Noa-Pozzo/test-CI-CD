@@ -91,5 +91,5 @@ jobs:
 
     # testing
     - name: Run unit tests
-      run: XDEBUG_MODE=coverage /usr/bin/phpunit
+      run: phpunit --coverage-cobertura=resultat.xml
       working-directory: tst
