@@ -108,4 +108,4 @@ jobs:
         output: both
 
     - name: Adding markdown
-      run: ./tst/log/coverage-cobertura.xml >> $GITHUB_STEP_SUMMARY
+      run: cat ./tst/log/coverage-cobertura.xml >$GITHUB_STEP_SUMMARY
