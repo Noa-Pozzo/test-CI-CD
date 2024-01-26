@@ -8,9 +8,9 @@ jobs:
   Composer:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: 20
     - name: Checkout
@@ -49,14 +49,14 @@ jobs:
         key: ${{ runner.os }}-${{ env.extensions-cache-key }}
 
     - name: Cache extensions
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ${{ steps.extcache.outputs.dir }}
         key: ${{ steps.extcache.outputs.key }}
         restore-keys: ${{ runner.os }}-${{ env.extensions-cache-key }}
 
     - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+      uses: shivammathur/setup-php@v4
       with:
         php-version: ${{ matrix.php-versions }}
         extensions: ${{ env.extensions }}
@@ -84,7 +84,7 @@ jobs:
       shell: bash
 
     - name: Cache dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ steps.get-date.outputs.date }}-${{ hashFiles('**/composer.json') }}
