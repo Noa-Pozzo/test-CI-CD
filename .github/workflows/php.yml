@@ -105,4 +105,4 @@ jobs:
         output: both
 
     - name: Adding markdown
-      run: sudo ./tst/log/coverage-cobertura.xml >> $GITHUB_STEP_SUMMARY
+      run: sudo cat ./tst/log/coverage-cobertura.xml >> $GITHUB_STEP_SUMMARY
