@@ -27,6 +27,9 @@ jobs:
 
     steps:
 
+    - name: update
+      run: apt update
+      
     # let's get started!
     - name: Checkout
       uses: actions/checkout@v4
