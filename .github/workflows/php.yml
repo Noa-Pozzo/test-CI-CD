@@ -96,12 +96,10 @@ jobs:
       run: ../vendor/bin/phpunit --coverage-cobertura=resultat.xml
       working-directory: tst
 
-    - run: cat tst/log/coverage-cobertura.xml
-
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
-        filename: ./tst/resultat.xml
+        filename: ./tst/log/coverage-cobertura.xml
         format: markdown
         badge: true
         output: both
