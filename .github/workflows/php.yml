@@ -5,13 +5,15 @@ on:
 
 jobs:
 
-    bluid:
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-dev
-      - name: blc 
-        env:
-          XDEBUG_MODE: coverage
-        runs-on: ubuntu-latest
+  bluid:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-dev
+    - name: blc 
+      env:
+        XDEBUG_MODE: coverage
+
 
     steps:
 
