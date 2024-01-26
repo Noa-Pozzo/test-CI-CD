@@ -95,7 +95,7 @@ jobs:
         XDEBUG_MODE: coverage
       run: ../vendor/bin/phpunit --coverage-cobertura=resultat.xml
       working-directory: tst
-
+      
     - name: Code Coverage Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
@@ -103,3 +103,6 @@ jobs:
         format: markdown
         badge: true
         output: both
+
+    - name: Adding markdown
+      run: https://img.shields.io/badge/Code%20Coverage-84%25-success?style=flat && ./tst/log/coverage-cobertura.xml >> $GITHUB_STEP_SUMMARY
