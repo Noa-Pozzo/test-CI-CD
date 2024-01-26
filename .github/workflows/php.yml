@@ -106,6 +106,8 @@ jobs:
         format: markdown
         badge: true
         output: both
-
+        
+    - run: cat ./tst/log/coverage-cobertura.xml
+    
     - name: Adding markdown
       run: cat tst/log/coverage-cobertura.xml >$GITHUB_STEP_SUMMARY
