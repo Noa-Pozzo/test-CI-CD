@@ -115,4 +115,4 @@ jobs:
     - run: cat ./tst/log/coverage-cobertura.xml
     
     - name: Adding markdown
-      run: cat ./tst/log/coverage-cobertura.xml > $GITHUB_STEP_SUMMARY
+      run: cat code-coverage-results.md > $GITHUB_STEP_SUMMARY
