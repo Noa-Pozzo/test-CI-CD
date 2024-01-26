@@ -28,7 +28,7 @@ jobs:
     steps:
 
     - name: update
-      run: apt update
+      run: sudo apt update
       
     # let's get started!
     - name: Checkout
