@@ -114,7 +114,7 @@ jobs:
         
     - run: mkdir -p tools/php-cs-fixer && composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
 
-    - run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
+    - run: phpcs -i 
     
     - name: Adding markdown
       run: cat code-coverage-results.md > $GITHUB_STEP_SUMMARY
