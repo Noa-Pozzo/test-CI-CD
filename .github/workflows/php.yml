@@ -112,7 +112,9 @@ jobs:
         badge: true
         output: both
         
-    - run: cat ./tst/log/coverage-cobertura.xml
+    - run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+
+    - run : php phpcs.phar -h
     
     - name: Adding markdown
       run: cat code-coverage-results.md > $GITHUB_STEP_SUMMARY
