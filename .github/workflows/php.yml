@@ -112,9 +112,9 @@ jobs:
         badge: true
         output: both
         
-    - run: mkdir -p tools/php-cs-fixer && composer require --working-dir=tools/php-cs-fixer friendsofphp/php-cs-fixer
+    - run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
 
-    - run: phpcs -i 
+    - run: php phpcs.phar tst/*.php
     
     - name: Adding markdown
       run: cat code-coverage-results.md > $GITHUB_STEP_SUMMARY
