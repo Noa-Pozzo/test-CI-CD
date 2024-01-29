@@ -115,6 +115,8 @@ jobs:
     - run: curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
 
     - run: php phpcs.phar tst/*.php
+
+    - run: php phpcbf.phar tst/*.php
     
     - name: Adding markdown
       run: cat code-coverage-results.md > $GITHUB_STEP_SUMMARY
